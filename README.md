@@ -6,6 +6,8 @@
 
 * A dummy conversion from python to powershell
 
+* The purpose of the conversion is recently a new requirement to handle typo in the customer details. e.g. address, names etc....
+
 ## Usage
 
 ```powershell
@@ -26,5 +28,3 @@ Description        : The strings are 2 edits away
 MinimumEditsNeeded : 2
 Ratio              : 0.9
 ```
-
-## 
