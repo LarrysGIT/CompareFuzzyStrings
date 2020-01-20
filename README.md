@@ -30,9 +30,9 @@ Ratio              : 0.9
 
 > # Ignore case = $true
 > New-Object CompareFuzzyStrings "Larry","larry",$true
-String1            : larry.song
-String2            : laryr.song
-Description        : The strings are 2 edits away
-MinimumEditsNeeded : 2
-Ratio              : 0.9
+String1            : Larry
+String2            : larry
+Description        : The strings are 0 edits away
+MinimumEditsNeeded : 0
+Ratio              : 1
 ```
