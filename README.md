@@ -14,14 +14,22 @@
 >
 > . .\CompareFuzzyStrings.ps1
 >
-> New-Object CompareFuzzyStrings "868d6056869b","a8199d1402dc"
+> New-Object CompareFuzzyStrings "868d6056869b","a8199d1402dc",$false
 String1            : 868d6056869b
 String2            : a8199d1402dc
 Description        : The strings are 12 edits away
 MinimumEditsNeeded : 12
 Ratio              : 0.25
 
-> New-Object CompareFuzzyStrings "larry.song","laryr.song"
+> New-Object CompareFuzzyStrings "larry.song","laryr.song",$false
+String1            : larry.song
+String2            : laryr.song
+Description        : The strings are 2 edits away
+MinimumEditsNeeded : 2
+Ratio              : 0.9
+
+> # Ignore case = $true
+> New-Object CompareFuzzyStrings "Larry","larry",$true
 String1            : larry.song
 String2            : laryr.song
 Description        : The strings are 2 edits away
