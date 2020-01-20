@@ -25,7 +25,7 @@ class CompareFuzzyStrings
     [decimal]$Ratio
 
     # constructor
-    CompareFuzzyStrings([string]$String1, [string]$String2)
+    CompareFuzzyStrings([string]$String1, [string]$String2, [bool]$IgnoreCase)
     {
         $this.String1 = $String1
         $this.String2 = $String2
@@ -58,7 +58,15 @@ class CompareFuzzyStrings
         {
             for($row = 1; $row -lt $rows; $row++)
             {
-                if($String1[$col - 1] -eq $String2[$row - 1])
+                if($IgnoreCase)
+                {
+                    $r = $String1[$col - 1] -ieq $String2[$row - 1]
+                }
+                else
+                {
+                    $r = $String1[$col - 1] -ceq $String2[$row - 1]
+                }
+                if($r)
                 {
                     # If the characters are the same in the two strings in a given position [i,j] then the cost is 0
                     $cost = 0
