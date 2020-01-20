@@ -35,4 +35,12 @@ String2            : larry
 Description        : The strings are 0 edits away
 MinimumEditsNeeded : 0
 Ratio              : 1
+
+> # Ignore case = $false
+> New-Object CompareFuzzyStrings "Larry","larry",$false
+String1            : Larry
+String2            : larry
+Description        : The strings are 1 edits away
+MinimumEditsNeeded : 1
+Ratio              : 0.8
 ```
